@@ -11,4 +11,4 @@ puts "----------"
 
 puts Store.sum(:annual_revenue)
 puts Store.average(:annual_revenue)
-puts Store.where('annual_revenue < ?', 1_000_000).count
+puts Store.where('annual_revenue < :max_revenue', max_revenue: 1_000_000).count

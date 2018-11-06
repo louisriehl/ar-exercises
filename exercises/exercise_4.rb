@@ -15,10 +15,10 @@ surrey.save
 whistler.save
 yaletown.save
 
-mens_stores = Store.where(mens_apparel: true)
+@mens_stores = Store.where(mens_apparel: true)
 
-mens_stores.each { |store| puts "#{store.name} #{store.annual_revenue}"}
+@mens_stores.each { |store| puts "#{store.name} #{store.annual_revenue}"}
 
-poor_stores = Store.where("annual_revenue < ?", 1_000_000)
+@poor_stores = Store.where("annual_revenue < ?", 1_000_000)
 
-poor_stores.each { |store| puts "#{store.name} #{store.annual_revenue}"}
+@poor_stores.each { |store| puts "#{store.name} #{store.annual_revenue}"}
